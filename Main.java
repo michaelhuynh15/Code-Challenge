@@ -22,47 +22,45 @@ public static void main(String[] args) {
 //    System.out.println(Arrays.toString(arrOfStr));
     
     for (int i = 0; i < arrOfStr.length; i++) {
-//    	System.out.println(arrOfStr[i]);
-//    	
-    	String[] command = arrOfStr[i].split(""); 
-//       	System.out.println(command[1]);
+    	String command = arrOfStr[i].substring(0,1);       // A new string containing the specified part of the given string.
+    	String movement = arrOfStr[i].substring(1);
        	
-       	if (command[0].equals("F")) {
+       	if (command.equals("F")) {
 	       	switch (facing) {
 	       	  case "N": 
-	       	    y = y + Integer.parseInt(command[1]);
+	       	    y = y + Integer.parseInt(movement);
 	       	    break;
 	       	  case "E":
-	       	    x = x + Integer.parseInt(command[1]);
+	       	    x = x + Integer.parseInt(movement);
 	       	    break;
 	       	  case "S":
-	       	    y = y - Integer.parseInt(command[1]);
+	       	    y = y - Integer.parseInt(movement);
 	       	    break;
 	       	  case "W":
-	       	    x = x - Integer.parseInt(command[1]);
+	       	    x = x - Integer.parseInt(movement);
 	       	    break;
 	       	}
        }
        	
-       if (command[0].equals("B")){
+       if (command.equals("B")){
            	switch (facing) {
          	  case "N":
-         	    y = y - Integer.parseInt(command[1]);
+         	    y = y - Integer.parseInt(movement);
          	    break;
          	  case "E":
-         	    x = x - Integer.parseInt(command[1]);
+         	    x = x - Integer.parseInt(movement);
          	    break;
          	  case "S":
-         	    y = y + Integer.parseInt(command[1]);
+         	    y = y + Integer.parseInt(movement);
          	    break;
          	  case "W":
-         	    x = x + Integer.parseInt(command[1]);
+         	    x = x + Integer.parseInt(movement);
          	    break;
          	    	    
          	}
        	}
-       	if (command[0].equals("L")){
-       		for (int j = 0; j < Integer.parseInt(command[1]); j++) {
+       	if (command.equals("L")){
+       		for (int j = 0; j < Integer.parseInt(movement); j++) {
            		switch (facing) {
              	  case "N":
              	    facing = "W";
@@ -81,8 +79,8 @@ public static void main(String[] args) {
        		}
        		}
        	
-       	if (command[0].equals("R")){
-       		for (int j = 0; j < Integer.parseInt(command[1]); j++) {
+       	if (command.equals("R")){
+       		for (int j = 0; j < Integer.parseInt(movement); j++) {
            		switch (facing) {
              	  case "N":
              	    facing = "E";
