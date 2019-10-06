@@ -1,6 +1,7 @@
 package demo;
 
 import java.util.Arrays;
+import java.util.Scanner; // import the Scanner class 
 
 public class Main {
 public static void main(String[] args) {
@@ -9,11 +10,16 @@ public static void main(String[] args) {
 	var y = 0;
 	var facing = "N";
 	var minDistance = 0;
-	
-	String str = "F1,R1,B2,L1,B3"; 
-    String[] arrOfStr = str.split(","); 
+	Scanner myObj = new Scanner(System.in);
+    String userCommand;
+    
+    System.out.println("Enter commands"); 
+    userCommand = myObj.nextLine();
+    
+    System.out.println("User commands are: " + userCommand); 
+    String[] arrOfStr = userCommand.split(","); 
 
-    System.out.println(Arrays.toString(arrOfStr));
+//    System.out.println(Arrays.toString(arrOfStr));
     
     for (int i = 0; i < arrOfStr.length; i++) {
 //    	System.out.println(arrOfStr[i]);
@@ -105,6 +111,7 @@ public static void main(String[] args) {
     	
 
     minDistance = Math.abs(x) + Math.abs(y);
+    System.out.println("Minimum amount of distance to get back to the starting point is: ");
     System.out.println(minDistance);
 }
     }
