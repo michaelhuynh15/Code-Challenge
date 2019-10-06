@@ -19,7 +19,6 @@ public static void main(String[] args) {
     System.out.println("User commands are: " + userCommand); 
     String[] arrOfStr = userCommand.split(","); 
 
-//    System.out.println(Arrays.toString(arrOfStr));
     
     for (int i = 0; i < arrOfStr.length; i++) {
     	String command = arrOfStr[i].substring(0,1);       // A new string containing the specified part of the given string.
@@ -61,42 +60,42 @@ public static void main(String[] args) {
        	}
        	if (command.equals("L")){
        		for (int j = 0; j < Integer.parseInt(movement); j++) {
-           		switch (facing) {
-             	  case "N":
-             	    facing = "W";
-             	    break;
-             	  case "E":
-             	    facing = "N";
-             	    break;
-             	  case "S":
-             		facing = "E";
-             	    break;
-             	  case "W":
-             		facing = "S";
-             	    break;
-             	    	    
-             	}
-       		}
+	           		switch (facing) {
+	             	  case "N":
+	             	    facing = "W";
+	             	    break;
+	             	  case "E":
+	             	    facing = "N";
+	             	    break;
+	             	  case "S":
+	             		facing = "E";
+	             	    break;
+	             	  case "W":
+	             		facing = "S";
+	             	    break;
+	             	    	    
+	             	}
+	       		}
        		}
        	
        	if (command.equals("R")){
        		for (int j = 0; j < Integer.parseInt(movement); j++) {
-           		switch (facing) {
-             	  case "N":
-             	    facing = "E";
-             	    break;
-             	  case "E":
-             	    facing = "S";
-             	    break;
-             	  case "S":
-             		facing = "W";
-             	    break;
-             	  case "W":
-             		facing = "N";
-             	    break;
-             	    	    
-             	}
-       		}
+	           		switch (facing) {
+	             	  case "N":
+	             	    facing = "E";
+	             	    break;
+	             	  case "E":
+	             	    facing = "S";
+	             	    break;
+	             	  case "S":
+	             		facing = "W";
+	             	    break;
+	             	  case "W":
+	             		facing = "N";
+	             	    break;
+	             	    	    
+	             	}
+	       		}
        		}
 
        	}
@@ -111,8 +110,8 @@ public static void main(String[] args) {
     minDistance = Math.abs(x) + Math.abs(y);
     System.out.println("Minimum amount of distance to get back to the starting point is: ");
     System.out.println(minDistance);
+	}
 }
-    }
     
     //remember to remove negative and only add the whole numbers
 
